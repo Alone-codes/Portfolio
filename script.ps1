@@ -1,4 +1,4 @@
-$startDate = Get-Date "2025-03-25"
+$startDate = Get-Date "2025-07-18"
 $endDate = Get-Date
 
 $currentDate = $startDate
@@ -13,9 +13,9 @@ while ($currentDate -le $endDate) {
         # Random hour/min/sec for natural look
         $hour = Get-Random -Minimum 9 -Maximum 22
         $minute = Get-Random -Minimum 0 -Maximum 60
-        $second = Get-Random -Minimum 0 -Maximum 60
 
-        $dateString = $currentDate.ToString("yyyy-MM-dd") + " $hour`:$minute`:$second"
+
+        $dateString = $currentDate.ToString("yyyy-MM-dd") + " $hour`:$minute"
 
         Add-Content file.txt "update $dateString"
         git add .
