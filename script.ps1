@@ -1,4 +1,4 @@
-$startDate = Get-Date "2025-07-18"
+$startDate = Get-Date "2025-08-26"
 $endDate = Get-Date
 
 $currentDate = $startDate
