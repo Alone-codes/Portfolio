@@ -59,7 +59,7 @@ window.addEventListener('scroll', () => {
 
 // Typing Effect
 const typingText = document.querySelector('.typing-text');
-const texts = ['Full Stack Developer', 'Web Designer', 'Problem Solver'];
+const texts = ['Full Stack Developer', 'Web Developer'];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

@@ -46,6 +46,13 @@ body {
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
+.disabled-link {
+    pointer-events: none;      /* Disable click */
+    opacity: 0.5;              /* Disabled look */
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
 .loading-screen.fade-out {
     opacity: 0;
     visibility: hidden;
@@ -604,7 +611,7 @@ section {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 2rem;
 }
 
