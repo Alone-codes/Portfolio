@@ -1,9 +1,11 @@
 // Initialize AOS (Animate On Scroll)
-AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100
-});
+if (window.AOS) {
+    AOS.init({
+        duration: 700,
+        once: true,
+        offset: 80
+    });
+}
 
 // Loading Screen
 window.addEventListener('load', () => {
@@ -13,7 +15,7 @@ window.addEventListener('load', () => {
         setTimeout(() => {
             loadingScreen.style.display = 'none';
         }, 500);
-    }, 1500);
+    }, 800);
 });
 
 // Navigation Toggle
@@ -59,7 +61,7 @@ window.addEventListener('scroll', () => {
 
 // Typing Effect
 const typingText = document.querySelector('.typing-text');
-const texts = ['Full Stack Developer', 'Web Developer'];
+const texts = ['Full Stack Developer', 'Backend Developer', 'Frontend Developer'];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -111,11 +113,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(15, 15, 35, 0.95)';
-        navbar.style.backdropFilter = 'blur(20px)';
+        navbar.style.background = 'rgba(8, 11, 18, 0.94)';
+        navbar.style.backdropFilter = 'blur(18px)';
     } else {
-        navbar.style.background = 'rgba(15, 15, 35, 0.8)';
-        navbar.style.backdropFilter = 'blur(20px)';
+        navbar.style.background = 'rgba(8, 11, 18, 0.78)';
+        navbar.style.backdropFilter = 'blur(18px)';
     }
 });
 
@@ -257,21 +259,6 @@ function showNotification(message, type) {
         }
     }, 5000);
 }
-
-// Parallax Effect for Hero Section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroContent = document.querySelector('.hero-content');
-    const heroParticles = document.querySelector('.hero-particles');
-    
-    if (heroContent) {
-        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-    
-    if (heroParticles) {
-        heroParticles.style.transform = `translateY(${scrolled * 0.3}px)`;
-    }
-});
 
 // Mouse Move Effect for Hero Cards
 const heroCard = document.querySelector('.hero-card');
