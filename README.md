@@ -1,2 +1,2 @@
 # Portfolio
-live link : https://alone-codes.github.io/Portfolio/#slide01
+live link : https://alone-codes.github.io/Portfolio/
