@@ -19,6 +19,7 @@ while ($currentDate -le $endDate) {
             $hour = Get-Random -Minimum 10 -Maximum 21
             $minute = Get-Random -Minimum 0 -Maximum 60
             $second = Get-Random -Minimum 0 -Maximum 60
+            
 
             $dateString = $currentDate.ToString("yyyy-MM-dd") + " $hour`:$minute`:$second"
 

@@ -11,10 +11,12 @@ if (window.AOS) {
 window.addEventListener('load', () => {
     setTimeout(() => {
         const loadingScreen = document.querySelector('.loading-screen');
-        loadingScreen.classList.add('fade-out');
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-        }, 500);
+        if (loadingScreen) {
+            loadingScreen.classList.add('fade-out');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }
     }, 800);
 });
 
@@ -22,18 +24,20 @@ window.addEventListener('load', () => {
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 
-navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        navToggle.classList.remove('active');
-        navMenu.classList.remove('active');
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
     });
-});
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+}
 
 // Active Navigation Link
 const sections = document.querySelectorAll('section');
@@ -68,6 +72,7 @@ let isDeleting = false;
 let typingSpeed = 100;
 
 function typeText() {
+    if (!typingText) return;
     const currentText = texts[textIndex];
     
     if (isDeleting) {
@@ -93,7 +98,43 @@ function typeText() {
 }
 
 // Start typing effect
-setTimeout(typeText, 2000);
+if (typingText) {
+    setTimeout(typeText, 2000);
+}
+
+// Force PDF download (never open in browser)
+document.querySelectorAll('a[download]').forEach(link => {
+    link.addEventListener('click', async (e) => {
+        const href = link.getAttribute('href');
+        if (!href || !href.toLowerCase().endsWith('.pdf')) return;
+        e.preventDefault();
+
+        const filename = link.getAttribute('download') || href.split('/').pop();
+
+        const triggerDownload = (url, revoke) => {
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.rel = 'noopener';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            if (revoke) {
+                setTimeout(() => URL.revokeObjectURL(url), 10000);
+            }
+        };
+
+        try {
+            const res = await fetch(href);
+            if (!res.ok) throw new Error('fetch failed');
+            const blob = await res.blob();
+            triggerDownload(URL.createObjectURL(blob), true);
+        } catch {
+            // Never navigate (that opens the PDF) — force download via anchor
+            triggerDownload(href, false);
+        }
+    });
+});
 
 // Smooth Scroll for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -112,6 +153,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Navbar Background on Scroll
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
+    if (!navbar) return;
     if (window.scrollY > 50) {
         navbar.style.background = 'rgba(8, 11, 18, 0.94)';
         navbar.style.backdropFilter = 'blur(18px)';
@@ -121,70 +163,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Skill Bars Animation
-const skillBars = document.querySelectorAll('.level-bar');
-const animateSkillBars = () => {
-    skillBars.forEach(bar => {
-        const rect = bar.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-        
-        if (isVisible && !bar.classList.contains('animated')) {
-            bar.classList.add('animated');
-            const width = bar.style.width;
-            bar.style.width = '0%';
-            setTimeout(() => {
-                bar.style.width = width;
-            }, 100);
-        }
-    });
-};
-
-window.addEventListener('scroll', animateSkillBars);
-window.addEventListener('load', animateSkillBars);
-
-// Contact Form
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(contactForm);
-    const formObject = {};
-    formData.forEach((value, key) => {
-        formObject[key] = value;
-    });
-
-    // Show loading state
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
-    submitBtn.disabled = true;
-
-    try {
-        // Replace with your actual form submission URL
-        const response = await fetch('https://script.google.com/macros/s/AKfycbwc3mp4nuzXqjgi8Ip3iLuiV-klz3dFcbklpnNiheM8fMFCjNopPR4LKPiRhjVNv-u9SA/exec', {
-            method: 'POST',
-            body: JSON.stringify(formObject),
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        });
-
-        if (response.ok) {
-            // Show success message
-            showNotification('Message sent successfully!', 'success');
-            contactForm.reset();
-        } else {
-            throw new Error('Failed to send message');
-        }
-    } catch (error) {
-        // Show error message
-        showNotification('Failed to send message. Please try again.', 'error');
-    } finally {
-        // Reset button state
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-    }
-});
+// Contact Form is handled by Formspree (see index.html initForm)
 
 // Notification System
 function showNotification(message, type) {
@@ -319,4 +298,4 @@ document.querySelectorAll('section').forEach(section => {
 // Console Easter Egg
 console.log('%c🚀 Welcome to Vishwanathan\'s Portfolio!', 'font-size: 20px; font-weight: bold; color: #667eea;');
 console.log('%cBuilt with passion and modern web technologies', 'font-size: 14px; color: #764ba2;');
-console.log('%cInterested in collaboration? Reach out at vishwanathan2k3@gmail.com', 'font-size: 12px; color: #f093fb;');
+console.log('%cInterested in collaboration? Reach out at vishwa7509@gmail.com', 'font-size: 12px; color: #f093fb;');

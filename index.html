@@ -33,6 +33,7 @@
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#projects" class="nav-link">Projects</a>
+                <a href="#resume" class="nav-link">Resume</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="nav-toggle" id="navToggle">
@@ -58,9 +59,10 @@
                     <span class="typing-text">Full Stack Developer</span>
                 </div>
                 <p class="hero-description">
-                    Full Stack Developer with 1+ years of experience building scalable web applications using Java,
-                    Spring Boot, Angular, React, and modern cloud-based development practices. Passionate about backend
-                    systems, API development, and clean user-focused interfaces.
+                    Full Stack Developer with 2+ years of hands-on experience designing, developing, and
+                    maintaining scalable web applications using Java, Spring Boot, React.js, Angular, TypeScript,
+                    Python, and modern web technologies. Passionate about building REST and GraphQL APIs,
+                    authentication systems, and clean, user-focused interfaces.
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">
@@ -71,10 +73,14 @@
                         <span>Get In Touch</span>
                         <i class="fas fa-envelope"></i>
                     </a>
+                    <a href="javascript:void(0)" class="btn btn-primary" onclick="downloadResume()">
+                        <span>Download Resume</span>
+                        <i class="fas fa-download"></i>
+                    </a>
                 </div>
                 <div class="hero-metrics" aria-label="Portfolio highlights">
                     <div>
-                        <strong>1+</strong>
+                        <strong>2+</strong>
                         <span>Years</span>
                     </div>
                     <div>
@@ -82,7 +88,7 @@
                         <span>Projects</span>
                     </div>
                     <div>
-                        <strong>18</strong>
+                        <strong>33</strong>
                         <span>Skills</span>
                     </div>
                 </div>
@@ -130,20 +136,21 @@
                 <div class="about-text" data-aos="fade-right">
                     <h3>Building the Future, One Line at a Time</h3>
                     <p>
-                        I'm Vishwanathan Chelladurai, an enthusiastic Full Stack Developer with a strong passion for creating
-                        innovative solutions.
-                        I hold a degree in Computer Science and Engineering and enjoy working on projects that challenge
-                        my skills and broaden my perspective.
+                        I'm Vishwanathan Chelladurai, an enthusiastic Full Stack Developer with 2+ years of hands-on
+                        experience and a strong passion for creating innovative solutions.
+                        I hold a degree in Computer Science and Engineering from M.I.E.T. Engineering College and enjoy
+                        working on projects that challenge my skills and broaden my perspective.
                     </p>
                     <p>
-                        I'm always eager to learn new technologies, collaborate with teams, and make meaningful
-                        contributions to the tech community.
-                        My goal is to grow as a developer and build solutions that have a positive impact on users and
-                        businesses.
+                        I have experience building REST and GraphQL APIs, responsive user interfaces, database-driven
+                        applications, and authentication systems, with a strong understanding of SDLC, Agile
+                        methodology, debugging, performance optimization, and clean coding practices.
+                        My goal is to deliver efficient, reliable, and user-focused software solutions while growing
+                        as a developer.
                     </p>
                     <div class="about-stats">
                         <div class="stat-item">
-                            <span class="stat-number">1+</span>
+                            <span class="stat-number">2+</span>
                             <span class="stat-label">Years Experience</span>
                         </div>
                         <div class="stat-item">
@@ -151,7 +158,7 @@
                             <span class="stat-label">Projects Completed</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">7+</span>
+                            <span class="stat-number">33</span>
                             <span class="stat-label">Technologies</span>
                         </div>
                     </div>
@@ -181,13 +188,48 @@
                             <h3>Frontend Development</h3>
                         </div>
                         <div class="skills-grid">
-                            <div class="skill-item"><div class="skill-icon"><i class="fab fa-angular"></i></div><div class="skill-info"><h4>Angular</h4></div></div>
-                            <div class="skill-item"><div class="skill-icon"><i class="fab fa-react"></i></div><div class="skill-info"><h4>React (TypeScript)</h4></div></div>
-                            <div class="skill-item"><div class="skill-icon"><i class="fab fa-js"></i></div><div class="skill-info"><h4>JavaScript</h4></div></div>
-                            <div class="skill-item"><div class="skill-icon"><i class="fab fa-html5"></i></div><div class="skill-info"><h4>HTML5</h4></div></div>
-                            <div class="skill-item"><div class="skill-icon"><i class="fab fa-css3-alt"></i></div><div class="skill-info"><h4>CSS3</h4></div></div>
-                            <div class="skill-item"><div class="skill-icon tw-icon">TW</div><div class="skill-info"><h4>Tailwind CSS</h4></div></div>
-                            <div class="skill-item"><div class="skill-icon"><i class="fab fa-bootstrap"></i></div><div class="skill-info"><h4>Bootstrap</h4></div></div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-angular"></i></div>
+                                <div class="skill-info">
+                                    <h4>Angular</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-react"></i></div>
+                                <div class="skill-info">
+                                    <h4>React (TypeScript)</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-js"></i></div>
+                                <div class="skill-info">
+                                    <h4>JavaScript</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                                <div class="skill-info">
+                                    <h4>HTML5</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                                <div class="skill-info">
+                                    <h4>CSS3</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon tw-icon">TW</div>
+                                <div class="skill-info">
+                                    <h4>Tailwind CSS</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-bootstrap"></i></div>
+                                <div class="skill-info">
+                                    <h4>Bootstrap</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -197,35 +239,180 @@
                             <h3>Backend Development</h3>
                         </div>
                         <div class="skills-grid">
-                            <div class="skill-item"><div class="skill-icon"><i class="fab fa-java"></i></div><div class="skill-info"><h4>Java</h4></div></div>
-                            <div class="skill-item"><div class="skill-icon"><i class="fas fa-leaf"></i></div><div class="skill-info"><h4>Spring Boot</h4></div></div>
-                            <div class="skill-item"><div class="skill-icon"><i class="fab fa-python"></i></div><div class="skill-info"><h4>Python</h4></div></div>
-                            <div class="skill-item"><div class="skill-icon"><i class="fas fa-code-branch"></i></div><div class="skill-info"><h4>REST APIs</h4></div></div>
-                            <div class="skill-item"><div class="skill-icon"><i class="fas fa-shield-alt"></i></div><div class="skill-info"><h4>JWT Authentication</h4></div></div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-java"></i></div>
+                                <div class="skill-info">
+                                    <h4>Java</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-leaf"></i></div>
+                                <div class="skill-info">
+                                    <h4>Spring Boot</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-sitemap"></i></div>
+                                <div class="skill-info">
+                                    <h4>Spring MVC</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-flask"></i></div>
+                                <div class="skill-info">
+                                    <h4>Flask</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                                <div class="skill-info">
+                                    <h4>Python</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+                                <div class="skill-info">
+                                    <h4>REST APIs</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                                <div class="skill-info">
+                                    <h4>GraphQL</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+                                <div class="skill-info">
+                                    <h4>JWT Authentication</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-user-shield"></i></div>
+                                <div class="skill-info">
+                                    <h4>Role-Based Access Control</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
                         <div class="category-header">
                             <i class="fas fa-database"></i>
                             <h3>Database</h3>
                         </div>
                         <div class="skills-grid">
-                            <div class="skill-item"><div class="skill-icon"><i class="fas fa-database"></i></div><div class="skill-info"><h4>MySQL</h4></div></div>
-                            <div class="skill-item"><div class="skill-icon"><i class="fas fa-database"></i></div><div class="skill-info"><h4>MongoDB</h4></div></div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                                <div class="skill-info">
+                                    <h4>MySQL</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                                <div class="skill-info">
+                                    <h4>MongoDB</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                                <div class="skill-info">
+                                    <h4>SQL Server</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
                         <div class="category-header">
                             <i class="fas fa-tools"></i>
                             <h3>DevOps / Tools</h3>
                         </div>
                         <div class="skills-grid">
-                            <div class="skill-item"><div class="skill-icon"><i class="fab fa-docker"></i></div><div class="skill-info"><h4>Docker</h4></div></div>
-                            <div class="skill-item"><div class="skill-icon"><i class="fas fa-cloud"></i></div><div class="skill-info"><h4>Azure DevOps</h4></div></div>
-                            <div class="skill-item"><div class="skill-icon"><i class="fab fa-git-alt"></i></div><div class="skill-info"><h4>Git</h4></div></div>
-                            <div class="skill-item"><div class="skill-icon"><i class="fas fa-sync-alt"></i></div><div class="skill-info"><h4>CI/CD</h4></div></div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                                <div class="skill-info">
+                                    <h4>Docker</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                                <div class="skill-info">
+                                    <h4>Azure DevOps</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                                <div class="skill-info">
+                                    <h4>Git</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-github"></i></div>
+                                <div class="skill-info">
+                                    <h4>GitHub</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-sync-alt"></i></div>
+                                <div class="skill-info">
+                                    <h4>CI/CD</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-paper-plane"></i></div>
+                                <div class="skill-info">
+                                    <h4>Postman</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                        <div class="category-header">
+                            <i class="fas fa-book"></i>
+                            <!-- <h3>Languages &amp; Concepts</h3> -->
+                            <h3>Language</h3>
+                        </div>
+                        <div class="skills-grid">
+                            <!-- <div class="skill-item"><div class="skill-icon">TS</div><div class="skill-info"><h4>TypeScript</h4></div></div>
+                            <div class="skill-item"><div class="skill-icon"><i class="fas fa-database"></i></div><div class="skill-info"><h4>SQL</h4></div></div> -->
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-cube"></i></div>
+                                <div class="skill-info">
+                                    <h4>OOP</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-diagram-project"></i></div>
+                                <div class="skill-info">
+                                    <h4>MVC Architecture</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                                <div class="skill-info">
+                                    <h4>Database Design</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                                <div class="skill-info">
+                                    <h4>Responsive Design</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-users"></i></div>
+                                <div class="skill-info">
+                                    <h4>Agile Scrum</h4>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-sync-alt"></i></div>
+                                <div class="skill-info">
+                                    <h4>SDLC</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -249,13 +436,40 @@
                     <span>October 2024 - Present</span>
                 </div>
                 <ul class="experience-list">
-                    <li>Developed and maintained full-stack web applications using Angular, React (TypeScript), and Spring Boot</li>
-                    <li>Designed and optimized MySQL and MongoDB databases for performance and reliability</li>
-                    <li>Built and integrated RESTful APIs between frontend and backend services</li>
-                    <li>Implemented responsive user interfaces using Tailwind CSS and Bootstrap</li>
+                    <li>Developed and maintained scalable full-stack web applications using React.js, Angular, Next.js,
+                        TypeScript, Java, and Spring Boot</li>
+                    <li>Designed and implemented REST APIs and GraphQL APIs between frontend and backend services</li>
+                    <li>Built responsive UI components with Tailwind CSS and Bootstrap, improving frontend-backend
+                        communication and user experience</li>
+                    <li>Designed and optimized MySQL, MongoDB, and PostgreSQL databases for performance and reliability
+                    </li>
+                    <li>Implemented JWT authentication, API integrations, debugging, and production-level enhancements
+                    </li>
                     <li>Used Azure DevOps for version control, task management, and CI/CD pipeline integration</li>
-                    <li>Worked on scalable application architecture and backend service optimization</li>
+                    <li>Collaborated with cross-functional teams in an Agile Scrum environment for feature development
+                        and delivery</li>
+                    <li>Delivered applications across Healthcare, Recruitment, Billing, and Business domains with
+                        reusable components and optimized architecture</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Education</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-card" data-aos="fade-up">
+                <div class="experience-header">
+                    <div>
+                        <h3>Bachelor of Engineering (B.E) - Computer Science and Engineering</h3>
+                        <p>M.I.E.T. Engineering College</p>
+                    </div>
+                    <span>2024 | Tamil Nadu, India</span>
+                </div>
             </div>
         </div>
     </section>
@@ -264,10 +478,87 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title">Professional Projects</h2>
                 <div class="section-line"></div>
             </div>
             <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-number">01</div>
+                        </div>
+                        <img src="images/project.jpg" alt="Local Dentist - Healthcare Appointment Booking">
+                    </div>
+                    <div class="project-content">
+                        <h3>Local Dentist - Healthcare Appointment Booking</h3>
+                        <p>
+                            Location-based healthcare booking platform connecting patients with nearby dental
+                            clinics, with separate Patient and Clinic workflows and role-based access.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">NestJS</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">Hasura</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-number">02</div>
+                        </div>
+                        <img src="images/project.jpg" alt="Lala Invoice - Billing Management">
+                    </div>
+                    <div class="project-content">
+                        <h3>Lala Invoice - Billing Management</h3>
+                        <p>
+                            Invoice and billing management system with reusable React components for customer,
+                            product, and invoice management backed by Flask REST APIs.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-number">03</div>
+                        </div>
+                        <img src="images/project.jpg" alt="EMS - Ship Equipment Tracking System">
+                    </div>
+                    <div class="project-content">
+                        <h3>EMS - Ship Equipment Tracking System</h3>
+                        <p>
+                            Container and ship equipment tracking system with Angular dashboards, Spring Boot
+                            REST APIs, and optimized MySQL records for equipment and maintenance.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Projects Section -->
+    <section id="personal-projects" class="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Personal Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid projects-grid-2">
                 <div class="project-card" data-aos="fade-up">
                     <div class="project-image">
                         <div class="project-overlay">
@@ -310,8 +601,8 @@
                     <div class="project-content">
                         <h3>Fake Profile Detection</h3>
                         <p>
-                            ML and NLP project that detects fake profiles on social networks by analyzing text data
-                            using algorithms like Naive Bayes, Linear SVM, and KNN.
+                            ML and NLP project that detects fake profiles on social networks using TF-IDF text
+                            analysis with Naive Bayes, Linear SVM, and KNN, achieving approximately 85% accuracy.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
@@ -319,9 +610,11 @@
                             <span class="tech-tag">Pandas</span>
                             <span class="tech-tag">Machine Learning</span>
                             <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Scikit-Learn</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Alone-codes/Fake-Profile-Identification-using-ML-and-NLP" target="_blank" class="project-link">
+                            <a href="https://github.com/Alone-codes/Fake-Profile-Identification-using-ML-and-NLP"
+                                target="_blank" class="project-link">
                                 <i class="fab fa-github"></i>
                                 <span>Code</span>
                             </a>
@@ -357,12 +650,68 @@
                                 <i class="fab fa-github"></i>
                                 <span>Code</span>
                             </a>
-                            <a href="https://math-ai-6ezf.onrender.com" target="_blank" class="project-link" aria-disabled="true">
+                            <a href="https://math-ai-6ezf.onrender.com" target="_blank" class="project-link"
+                                aria-disabled="true">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span>Live Demo</span>
                             </a>
                         </div>
                     </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-number">04</div>
+                        </div>
+                        <img src="images/project.jpg" alt="AI Chatbot Application">
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Chatbot Application</h3>
+                        <p>
+                            AI-powered chatbot for natural language interaction with intent recognition,
+                            conversational workflows, and REST-based frontend-backend communication.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Resume</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="resume-content" data-aos="fade-up">
+                <div class="resume-info">
+                    <div>
+                        <h3>My Resume</h3>
+                        <p>
+                            Preview my resume below or download the PDF copy. It includes my profile,
+                            experience, skills, education, and projects.
+                        </p>
+                    </div>
+                    <div class="resume-actions">
+                        <a href="assets/Resume.pdf" class="btn btn-primary"
+                            download="Vishwanathan_Chelladurai_Resume.pdf">
+                            <span>Download Resume</span>
+                            <i class="fas fa-download"></i>
+                        </a>
+                        <a href="Resume.pdf" target="_blank" rel="noopener" class="btn btn-outline">
+                            <span>View PDF</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="resume-preview">
+                    <iframe src="Resume.pdf" title="Vishwanathan Chelladurai - Resume" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -385,7 +734,7 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>vishwanathan2k3@gmail.com</span>
+                            <span>vishwa7509@gmail.com</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
@@ -393,7 +742,7 @@
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Trichy, Tamilnadu</span>
+                            <span>Trichy, Tamilnadu, India</span>
                         </div>
                     </div>
                     <div class="contact-social">
@@ -407,22 +756,32 @@
                     </div>
                 </div>
                 <div class="contact-form" data-aos="fade-left">
+
+                    <div data-fs-success class="form-success"></div>
+                    <div data-fs-error class="form-error"></div>
+
                     <form id="contactForm">
+
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required data-fs-field>
+
+                            <span data-fs-error="email"></span>
                         </div>
+
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required
+                                data-fs-field></textarea>
+
+                            <span data-fs-error="message"></span>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5"
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
+
+                        <button type="submit" class="btn btn-primary" data-fs-submit-btn>
                             <span>Send Message</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
+
                     </form>
+
                 </div>
             </div>
         </div>
@@ -439,6 +798,51 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        window.formspree =
+            window.formspree ||
+            function () {
+                (formspree.q = formspree.q || []).push(arguments);
+            };
+
+        formspree('initForm', {
+            formElement: '#contactForm',
+            formId: 'mdekglgl',
+            disable: function (ctx) {
+                ctx.form.setAttribute('aria-busy', 'true');
+                ctx.form.querySelectorAll("[type='submit']:enabled, [data-fs-submit-btn]:enabled").forEach(function (btn) {
+                    btn.dataset.fsOriginalHtml = btn.innerHTML;
+                    btn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
+                    btn.disabled = true;
+                });
+            },
+            enable: function (ctx) {
+                ctx.form.removeAttribute('aria-busy');
+                ctx.form.querySelectorAll("[type='submit']:disabled, [data-fs-submit-btn]:disabled").forEach(function (btn) {
+                    if (btn.dataset.fsOriginalHtml) {
+                        btn.innerHTML = btn.dataset.fsOriginalHtml;
+                        delete btn.dataset.fsOriginalHtml;
+                    }
+                    btn.disabled = false;
+                });
+            }
+        });
+    </script>
+
+    <script>
+        function downloadResume() {
+            const link = document.createElement('a');
+            link.href = './Resume.pdf';
+            link.download = 'Vishwanathan_Chelladurai_Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
     <script src="js/script.js"></script>
 </body>
 
